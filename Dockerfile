@@ -1,5 +1,6 @@
 FROM public.ecr.aws/docker/library/node:22-slim
-RUN npm install -g npm@11 --loglevel=error
+RUN node -v && npm -v
+#RUN npm install -g npm@11 --loglevel=error
 
 # Instalando curl
 RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
